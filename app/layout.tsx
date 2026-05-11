@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono, Playfair_Display } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 import { Providers } from '@/components/Providers';
 
@@ -37,6 +38,7 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${inter.variable} ${jetbrains.variable}`}>
       <body className="min-h-screen bg-cream font-body">
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );
